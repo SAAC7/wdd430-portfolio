@@ -10,7 +10,7 @@ export default function About() {
       
       <SkillCard 
         category="Technical Skills" 
-        skills={['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js']} 
+        skills={['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Python', 'MongoDB', 'Express', 'REST APIs', 'Git', 'Docker', 'Django', 'Supertest', 'Swagger']} 
       />
     </main>
   );
