@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Practice</title>
+
+    <!-- react librery -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- babel librery -->
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Direct DOM manipulation -->
+    <article id="direct-news"></article>
+      <!-- React rendering -->
+    <article id="react-news"></article>
+
+
+    <script>
+        const newArticle = document.getElementById("direct-news");
+        const newParagraph = document.createElement("p");
+        const text = "Breaking news: Imperative programming!";
+        const headerContent = document.createTextNode(text);
+
+        newParagraph.appendChild(headerContent);
+        newArticle.appendChild(newParagraph);
+    </script>
+
+    <script type="text/jsx">
+        function NewsParagraph() {
+            const text = "Breaking News: React is awesome!";
+            return <p>{text}</p>;
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("react-news"));
+        root.render(<NewsParagraph />); 
+    </script>
+
+    
+
+</body>
+
+</html>
